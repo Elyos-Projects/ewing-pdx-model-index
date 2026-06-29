@@ -1,0 +1,32 @@
+{
+  "id": "ewing-pdx-europdx-101",
+  "title": "EuroPDX / ProXe / Cell Model Passports ingest",
+  "project": "ewing-pdx-model-index",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-data",
+    "bioinformatics",
+    "ingest",
+    "metadata-schema"
+  ],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Future breadth from EuroPDX, ProXe, and Cell Model Passports can only be ingested after per-source license verification in the register (backlog; PLAN section 12). Binding cancer guardrails (PLAN section 7): open-access/aggregate/de-identified metadata only; no controlled-access (dbGaP/EGA) or patient-identifiable data; COSMIC/OncoKB reference-only (not ingested); provenance on every assertion; links only, no omics/sequence/image payloads re-hosted; no medical advice. No partner/requestor secured yet, so verifiedNeed is false.",
+  "objective": "Add ingest for EuroPDX / ProXe / Cell Model Passports, normalized to the schema with provenance, only for sources verified ingestible in sources.yaml.",
+  "acceptanceCriteria": [
+    "Each source's license verified and ingest:true recorded in sources.yaml before ingestion; reference-only sources excluded.",
+    "Records normalized to the schema, provenance-stamped, identifiers cross-referenced; only open metadata ingested, no payloads re-hosted.",
+    "Re-runnable, idempotent fetch with checksums + retrieval dates; reviewed by maintainer."
+  ],
+  "output": "A merged PR adding EuroPDX / ProXe / Cell Model Passports ingest (post per-source license verification).",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

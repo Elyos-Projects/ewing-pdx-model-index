@@ -1,0 +1,32 @@
+{
+  "id": "ewing-pdx-edu-201",
+  "title": "(HIGH-RISK, gated) sourced research-context explainer",
+  "project": "ewing-pdx-model-index",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-data",
+    "bioinformatics",
+    "explainer",
+    "high-risk-gated"
+  ],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "This optional explanatory track is HIGH-RISK and gated: it only opens if the PLAN section 7 track opens, and any patient-facing/research-context text requires credentialed oncologist + patient-advocate sign-off and explicit \"not medical advice\" framing before merge (PLAN section 7/8). It is NOT part of v1.0. This task produces a sourced, non-advice research-context explainer only - it must never give medical advice, prognosis, eligibility, or treatment guidance, which remain refused. Binding cancer guardrails (PLAN section 7): open-access/aggregate/de-identified metadata only; no controlled-access (dbGaP/EGA) or patient-identifiable data; COSMIC/OncoKB reference-only (not ingested); provenance on every assertion; links only, no omics/sequence/image payloads re-hosted; no medical advice. No partner/requestor secured yet, so verifiedNeed is false.",
+  "objective": "Draft a fully-sourced research-context explainer (background, not advice) gated behind oncologist + patient-advocate sign-off, only if the PLAN section 7 high-risk track opens.",
+  "acceptanceCriteria": [
+    "Content is research-context background only, every claim provenance-stamped to an open source; no medical advice, prognosis, eligibility, ranking, or treatment guidance.",
+    "Carries an explicit \"not medical advice\" disclaimer and is gated behind credentialed oncologist + patient-advocate sign-off before merge.",
+    "Published only if the PLAN section 7 high-risk track is opened; otherwise remains blocked."
+  ],
+  "output": "output/research-context-explainer.md (sourced, gated, \"not medical advice\"), only if the section 7 track opens.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

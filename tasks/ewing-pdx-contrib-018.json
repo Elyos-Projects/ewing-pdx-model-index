@@ -1,0 +1,32 @@
+{
+  "id": "ewing-pdx-contrib-018",
+  "title": "Contribution + correction workflow with SLA (O8)",
+  "project": "ewing-pdx-model-index",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-data",
+    "bioinformatics",
+    "governance",
+    "community"
+  ],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Corrections must be honored with a median time-to-correction under 14 days (O8); this task documents the contribution and correction workflow and its SLA so external reports are triaged and resolved (PLAN M3, section 15). Depends on the v0.5 release (016). Binding cancer guardrails (PLAN section 7): open-access/aggregate/de-identified metadata only; no controlled-access (dbGaP/EGA) or patient-identifiable data; COSMIC/OncoKB reference-only (not ingested); provenance on every assertion; links only, no omics/sequence/image payloads re-hosted; no medical advice. No partner/requestor secured yet, so verifiedNeed is false.",
+  "objective": "Document a contribution + correction workflow with an explicit SLA, issue templates, and provenance/license requirements for submissions.",
+  "acceptanceCriteria": [
+    "Workflow documents how to submit additions/corrections, required provenance + license for each, and the review path.",
+    "Correction SLA stated (median time-to-correction <14 days, O8) with triage labels and tracking.",
+    "Contribution terms require open-license, no controlled/PII data, and per-assertion provenance; reviewed by maintainer."
+  ],
+  "output": "CONTRIBUTING.md + correction-workflow doc defining the submission/correction process and SLA.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

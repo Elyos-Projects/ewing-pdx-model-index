@@ -1,0 +1,32 @@
+{
+  "id": "ewing-pdx-orphan-102",
+  "title": "Orphaned-accession reconciliation tooling",
+  "project": "ewing-pdx-model-index",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-data",
+    "bioinformatics",
+    "data-quality",
+    "identifiers"
+  ],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Tooling to reconcile orphaned accessions reduces dead links below 2% and keeps molecular references resolvable (backlog; PLAN O7). Binding cancer guardrails (PLAN section 7): open-access/aggregate/de-identified metadata only; no controlled-access (dbGaP/EGA) or patient-identifiable data; COSMIC/OncoKB reference-only (not ingested); provenance on every assertion; links only, no omics/sequence/image payloads re-hosted; no medical advice. No partner/requestor secured yet, so verifiedNeed is false.",
+  "objective": "Build tooling that detects and reconciles orphaned/dead accessions, proposing fixes without silently mutating curated values.",
+  "acceptanceCriteria": [
+    "Detects orphaned/dead accessions and links across the catalog; reports candidates for reconciliation.",
+    "Proposed reconciliations are logged and reviewable; no silent overwrites; target dead-link rate <2%.",
+    "Integrated with the dead-link CI check; reviewed by maintainer."
+  ],
+  "output": "A merged PR adding orphaned-accession reconciliation tooling with a reconciliation report.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

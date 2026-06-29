@@ -1,0 +1,36 @@
+{
+  "id": "ewing-pdx-ingest-008",
+  "title": "PDCM Finder + NCI PDMR open-metadata ingest",
+  "project": "ewing-pdx-model-index",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-data",
+    "bioinformatics",
+    "ingest",
+    "metadata-schema"
+  ],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "PDCM Finder and NCI PDMR add PDX/organoid breadth, ingesting open metadata only after their terms are verified in the license register (PLAN M1). Depends on the license register (002) and the Cellosaurus+DepMap ingest (007). Binding cancer guardrails (PLAN section 7): open-access/aggregate/de-identified metadata only; no controlled-access (dbGaP/EGA) or patient-identifiable data; COSMIC/OncoKB reference-only (not ingested); provenance on every assertion; links only, no omics/sequence/image payloads re-hosted; no medical advice. No partner/requestor secured yet, so verifiedNeed is false.",
+  "objective": "Build a re-runnable PDCM Finder + NCI PDMR open-metadata ingest that normalizes to the schema with provenance and respects per-source ingest flags.",
+  "acceptanceCriteria": [
+    "Re-runnable, idempotent fetch with cached checksums + retrieval dates; ingest only where sources.yaml ingest:true.",
+    "Each record provenance-stamped and license-labeled per the license register; identifiers normalized with aliases[].",
+    "Only open metadata ingested; no controlled-access fields and no omics payloads re-hosted; reviewed by maintainer + domain reviewer."
+  ],
+  "output": "A merged PR adding the PDCM Finder + NCI PDMR open-metadata ingest normalizing to the schema with provenance.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT",
+  "resources": [
+    "https://www.cancermodels.org/",
+    "https://pdmr.cancer.gov/"
+  ]
+}
