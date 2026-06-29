@@ -1,0 +1,35 @@
+{
+  "id": "ewing-pdx-schema-001",
+  "title": "Define Ewing Model Datasheet schema v0.1 (JSON-Schema + field docs)",
+  "project": "ewing-pdx-model-index",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "ewing-sarcoma", "open-data", "bioinformatics", "metadata-schema"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Ewing sarcoma model metadata is scattered across PDCM Finder, Cellosaurus, DepMap, NCI PDMR, CCDI, PPTC, CSTN, and open-access papers with non-interoperable identifiers and no shared, provenance-aware schema. Before any breadth ingestion, the project must lock an honest 'Model Datasheet' standard so every later record is schema-valid, fully sourced, and re-identification-safe. This is the 'rules before data' foundation task (PLAN M0). No partner/requestor is secured yet, so verifiedNeed is false. Binding cancer guardrails apply: open-access/aggregate/de-identified data only; no controlled-access (dbGaP/EGA) or patient-identifiable data; COSMIC/OncoKB reference-only; provenance on every assertion; no medical advice.",
+  "objective": "Produce a draft-07 JSON-Schema (AJV-compatible) plus field documentation defining the canonical Ewing Model Datasheet, including per-assertion provenance, access-terms vocabulary, molecular-data access-tier labeling, a required explicitUnknowns field, and coarsen/omit rules for every potentially-identifying attribute.",
+  "acceptanceCriteria": [
+    "JSON-Schema covers all PLAN §6 canonical fields: modelId, aliases[], modelType, diagnosis, fusionConfirmed, fusion, derivationContext, provider, accessTerms, accessUrl, molecularData[] (assay, accession, repository, accessTier, license), drugResponseDataAvailable, references[], provenance[] (value, source, sourceUrl, license, retrievedDate, assertedBy, confidence), validationStatus, reidReviewStatus, lastVerified, explicitUnknowns.",
+    "Schema rejects any record containing a field assertion that lacks a provenance entry.",
+    "Every potentially-identifying field documents an explicit coarsen-or-omit rule (omit when in doubt).",
+    "Schema validates the 5-10 seed records (ewing-pdx-seed-005) and is reviewed by the maintainer and a domain reviewer.",
+    "Reuses packages/schema AJV/draft-07 patterns; merged with an example datasheet and field-level docs."
+  ],
+  "resources": [
+    "C:/code/elyos/packages/schema/src/schemas.ts",
+    "C:/code/elyos/docs/good-deed-definition.md",
+    "https://www.cellosaurus.org/",
+    "https://depmap.org/portal/",
+    "https://www.cancermodels.org/",
+    "Gebru et al., Datasheets for Datasets"
+  ],
+  "output": "A merged PR adding ewing-model-datasheet.schema.json (draft-07), field documentation, and an example datasheet, validating the seed records and rejecting unsourced assertions.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}
