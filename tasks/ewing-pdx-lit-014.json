@@ -1,0 +1,34 @@
+{
+  "id": "ewing-pdx-lit-014",
+  "title": "PMC-OA literature extraction of model descriptions (reviewed)",
+  "project": "ewing-pdx-model-index",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-data",
+    "bioinformatics",
+    "literature-extraction",
+    "pmc-oa"
+  ],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Model descriptions in the literature are extracted only from the PMC Open Access subset, with per-article license verification and human review of every AI-extracted assertion before publish (PLAN M2). Depends on the schema (001). Binding cancer guardrails (PLAN section 7): open-access/aggregate/de-identified metadata only; no controlled-access (dbGaP/EGA) or patient-identifiable data; COSMIC/OncoKB reference-only (not ingested); provenance on every assertion; links only, no omics/sequence/image payloads re-hosted; no medical advice. No partner/requestor secured yet, so verifiedNeed is false.",
+  "objective": "Extract Ewing model descriptions from PMC-OA articles, provenance-stamping each assertion to its article and human-reviewing before publish.",
+  "acceptanceCriteria": [
+    "Only PMC Open Access subset articles (license verified per article).",
+    "Every AI-extracted assertion provenance-stamped to the article + human-reviewed before publish; no unsourced or model-originated claims."
+  ],
+  "output": "output/ literature-extraction dataset from PMC-OA articles, per-assertion provenance-stamped and human-reviewed.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0",
+  "resources": [
+    "https://www.ncbi.nlm.nih.gov/pmc/tools/openftlist/"
+  ]
+}

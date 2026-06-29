@@ -1,0 +1,38 @@
+{
+  "id": "ewing-pdx-licen-002",
+  "title": "Build sources.yaml license register (>=10 sources, verified, ingest flags)",
+  "project": "ewing-pdx-model-index",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-data",
+    "bioinformatics",
+    "licensing",
+    "data-governance"
+  ],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Before any ingestion, every candidate data source must have its license, access tier, and an ingest:true|false switch verified and recorded so the catalog never re-publishes controlled or non-open data as if it were open (PLAN section 7, M0). This register is the code-enforced authority for what may be ingested versus referenced-only. Binding cancer guardrails (PLAN section 7): open-access/aggregate/de-identified metadata only; no controlled-access (dbGaP/EGA) or patient-identifiable data; COSMIC/OncoKB reference-only (not ingested); provenance on every assertion; links only, no omics/sequence/image payloads re-hosted; no medical advice. No partner/requestor secured yet, so verifiedNeed is false.",
+  "objective": "Author sources.yaml registering >=10 data sources, each with license, license URL, access tier, ingest flag, and verifier+date, encoding the reference-only vs. ingestible policy.",
+  "acceptanceCriteria": [
+    ">=10 sources, each with license, license URL, access tier, ingest:true|false, verifier + date.",
+    "COSMIC, OncoKB, ATCC/DSMZ marked ingest:false (reference-only); dbGaP/EGA marked out-of-scope.",
+    "Cellosaurus/DepMap confirmed CC BY 4.0; PDCM Finder/PDMR/CCDI/CSTN terms verified or flagged \"needs confirmation\" (not silently assumed)."
+  ],
+  "output": "sources.yaml committed with >=10 sources, per-source license/access-tier/ingest flags, and verifier+date provenance.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0",
+  "resources": [
+    "https://www.cellosaurus.org/",
+    "https://depmap.org/portal/",
+    "https://www.cancermodels.org/",
+    "https://pdmr.cancer.gov/"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "ewing-pdx-prov-003",
+  "title": "Implement per-assertion provenance model + validator",
+  "project": "ewing-pdx-model-index",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-data",
+    "bioinformatics",
+    "provenance",
+    "metadata-schema"
+  ],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Every field assertion in the catalog must carry per-assertion provenance (value, source, sourceUrl, license, retrievedDate, assertedBy, confidence) so records are auditable and license-cleared (PLAN section 6, M0). This task implements the provenance data model and a validator that rejects unsourced assertions, depending on the datasheet schema (ewing-pdx-schema-001). Binding cancer guardrails (PLAN section 7): open-access/aggregate/de-identified metadata only; no controlled-access (dbGaP/EGA) or patient-identifiable data; COSMIC/OncoKB reference-only (not ingested); provenance on every assertion; links only, no omics/sequence/image payloads re-hosted; no medical advice. No partner/requestor secured yet, so verifiedNeed is false.",
+  "objective": "Implement the per-assertion provenance model and a validator that rejects any record containing a field assertion lacking a provenance entry.",
+  "acceptanceCriteria": [
+    "Provenance model implements value, source, sourceUrl, license, retrievedDate, assertedBy, and confidence per assertion.",
+    "Validator rejects any record with a field assertion that lacks a corresponding provenance entry.",
+    "Validator runs in CI and is reused by downstream ingest/release tasks; reuses packages/schema AJV/draft-07 patterns.",
+    "Reviewed by the maintainer; merged with unit tests covering missing-provenance rejection."
+  ],
+  "output": "A merged PR adding the provenance model types + validator (with tests) wired for CI use.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT",
+  "resources": [
+    "C:/code/elyos/packages/schema/src/schemas.ts"
+  ]
+}

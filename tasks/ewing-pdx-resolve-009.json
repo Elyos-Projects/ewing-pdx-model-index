@@ -1,0 +1,31 @@
+{
+  "id": "ewing-pdx-resolve-009",
+  "title": "Identifier cross-reference resolver (logged, reversible)",
+  "project": "ewing-pdx-model-index",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-data",
+    "bioinformatics",
+    "entity-resolution",
+    "identifiers"
+  ],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The same model appears across sources under different identifiers; the resolver merges them into one canonical entity with explicit, logged, reversible rules and per-source provenance, never silently overwriting conflicting values (PLAN M1, O3). Depends on the Cellosaurus+DepMap ingest (007). Binding cancer guardrails (PLAN section 7): open-access/aggregate/de-identified metadata only; no controlled-access (dbGaP/EGA) or patient-identifiable data; COSMIC/OncoKB reference-only (not ingested); provenance on every assertion; links only, no omics/sequence/image payloads re-hosted; no medical advice. No partner/requestor secured yet, so verifiedNeed is false.",
+  "objective": "Implement an identifier cross-reference resolver that merges same-model records under explicit, logged, reversible rules while surfacing conflicts with per-source provenance.",
+  "acceptanceCriteria": [
+    "Same model across sources merged into one canonical entity; rules explicit + logged; no silent merges; merges reversible.",
+    "Conflicting field values surfaced with per-source provenance, not overwritten."
+  ],
+  "output": "A merged PR adding the identifier cross-reference resolver with a merge log and conflict surfacing.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

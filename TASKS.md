@@ -173,6 +173,40 @@ quarterly re-ingest CI running; steward/partner named; v1.0 released; outcomes-t
 
 ---
 
+## Generated task index
+
+Every table row above now has an executable, schema-valid `tasks/<id>.json` (validated against
+`taskSchema`), so `elyos browse`/`pull` can process the full backlog — not just the seed. All tasks
+are **donated lane**, `status: open`, `verifiedNeed: false`, `requestor: TBD` until a partner or ≥3
+researcher requests are secured.
+
+**Fan-out:** none. Each `TASKS.md` row maps to exactly one task JSON (representative tasks only). The
+backlog has no plan-enumerated fan-out dimension — the seed set (`-seed-005`) is sized 5–10 but the
+specific models are not yet named, the breadth ingests are already separate per-source rows
+(`-ingest-007/008`, `-europdx-101`), and no target-language set is enumerated for `-i18n-202`. Those
+items expand into concrete per-item tasks only on partner/scope confirmation; no models, datasets,
+languages, or beneficiaries were fabricated.
+
+**Guardrail notes:** `ewing-pdx-edu-201` is HIGH-RISK and gated — kept as a sourced,
+non-advice research-context explainer requiring oncologist + patient-advocate sign-off and a "not
+medical advice" disclaimer, opening only if the PLAN §7 track opens; it never authors medical advice,
+prognosis, eligibility, or trial/treatment rankings (those remain refused). `ewing-pdx-reid-004` is
+the binding re-identification release gate. All data/ingest tasks carry the PLAN §7 cancer guardrails
+(open/aggregate/de-identified metadata only; controlled-access out of scope; COSMIC/OncoKB
+reference-only; links-only, no payloads re-hosted; per-assertion provenance).
+
+Generated ids (26, excluding the pre-existing seed `ewing-pdx-schema-001`):
+
+- **M0:** `ewing-pdx-licen-002`, `ewing-pdx-prov-003`, `ewing-pdx-reid-004`, `ewing-pdx-seed-005`, `ewing-pdx-part-006`
+- **M1:** `ewing-pdx-ingest-007`, `ewing-pdx-ingest-008`, `ewing-pdx-resolve-009`, `ewing-pdx-ci-010`, `ewing-pdx-rel-011`
+- **M2:** `ewing-pdx-fusion-012`, `ewing-pdx-omics-013`, `ewing-pdx-lit-014`, `ewing-pdx-drug-015`, `ewing-pdx-rel-016`
+- **M3:** `ewing-pdx-test-017`, `ewing-pdx-contrib-018`, `ewing-pdx-fresh-019`, `ewing-pdx-site-020`, `ewing-pdx-rel-021`
+- **Backlog:** `ewing-pdx-europdx-101`, `ewing-pdx-orphan-102`, `ewing-pdx-gaps-103`, `ewing-pdx-rrid-104`, `ewing-pdx-edu-201`, `ewing-pdx-i18n-202`
+
+Total task files in `tasks/`: **27** (1 seed + 26 generated).
+
+---
+
 ## Example task JSON (first M0 task, schema-valid)
 
 ```json

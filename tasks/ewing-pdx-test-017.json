@@ -1,0 +1,31 @@
+{
+  "id": "ewing-pdx-test-017",
+  "title": "Moderated researcher task-test (O5 <10-min find+cite)",
+  "project": "ewing-pdx-model-index",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": [
+    "cancer-research",
+    "ewing-sarcoma",
+    "open-data",
+    "bioinformatics",
+    "user-testing",
+    "outcomes"
+  ],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "O5 - a researcher finding, comparing, and correctly citing a model and its access terms in under 10 minutes - is one of the two real success signals; this moderated task-test measures it with independent researchers and files fixes (PLAN section 4, M3). Depends on the v0.5 release (016). Binding cancer guardrails (PLAN section 7): open-access/aggregate/de-identified metadata only; no controlled-access (dbGaP/EGA) or patient-identifiable data; COSMIC/OncoKB reference-only (not ingested); provenance on every assertion; links only, no omics/sequence/image payloads re-hosted; no medical advice. No partner/requestor secured yet, so verifiedNeed is false.",
+  "objective": "Run a moderated task-test with 3-5 independent researchers measuring time-to-find+cite, logging friction and filing fixes.",
+  "acceptanceCriteria": [
+    "3-5 independent researchers find, compare, and correctly cite a model + its access terms in <10 min; results + friction logged; fixes filed.",
+    "Methodology and results recorded in a review document; no participant PII published."
+  ],
+  "output": "review/task-test-<date>.md recording methodology, per-participant results, friction, and filed fixes.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
